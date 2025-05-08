@@ -1,0 +1,115 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import Projects from "../components/Projects.astro";
+import Contact from "../components/Contact.astro";
+import Skills from "../components/Skills.astro";
+import CV from "../components/CV.astro";
+---
+
+<Layout>
+  <div class="content">
+    <div id="hero">
+      <Hero />
+    </div>
+    <div id="plant">
+      <img src="plant.webp" alt="" />
+    </div>
+    <div id="bee">
+      <img src="bee.webp" alt="" />
+    </div>
+    <div id="social">
+      <Contact />
+    </div>
+    <div id="projects">
+      <Projects />
+    </div>
+    <div id="cat">
+      <img src="cat.webp" alt="" />
+    </div>
+    <div id="skills">
+      <Skills />
+    </div>
+    <div id="resume">
+      <CV />
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .content {
+    display: grid;
+    gap: 2rem;
+    margin: 1rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  #hero {
+    grid-column: span 3 / span 3;
+  }
+
+  #social {
+    grid-column: 3 / span 6;
+  }
+
+  #projects {
+    grid-column: span 4;
+  }
+
+  #skills {
+    grid-column: 3 / span 6;
+  }
+
+  #resume {
+    grid-column: 2 / 4;
+  }
+
+  #plant {
+    grid-column: 4 / span 6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    img {
+      width: 16rem;
+    }
+  }
+
+  #bee {
+    grid-column: span 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 8rem;
+    }
+  }
+
+  #cat {
+    grid-column: 1 / span 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 20rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    #cat,
+    #plant,
+    #bee {
+      display: none;
+    }
+
+    #hero,
+    #social,
+    #social,
+    #projects,
+    #skills,
+    #resume {
+      grid-column: span 4;
+    }
+  }
+</style>

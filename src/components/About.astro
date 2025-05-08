@@ -1,0 +1,31 @@
+---
+import "../styles/global.css";
+import Card from "../layouts/Card.astro";
+import LinkButton from "./LinkButton.astro";
+import LinkedInIcon from "phosphor-astro/LinkedinLogo.astro";
+import GitHubIcon from "phosphor-astro/GithubLogo.astro";
+---
+
+<section>
+  <Card>
+    <h1>Contact Me !</h1>
+    <div class="links">
+      <LinkButton href="test">
+        <GitHubIcon />
+        <p>Github</p>
+      </LinkButton>
+      <LinkButton href="test">
+        <LinkedInIcon />
+        <p>LinkedIn</p>
+      </LinkButton>
+    </div>
+  </Card>
+</section>
+
+<style>
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+</style>

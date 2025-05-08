@@ -1,0 +1,29 @@
+---
+import "../styles/global.css";
+import Card from "../layouts/Card.astro";
+import LinkButton from "./LinkButton.astro";
+import FloppyDiskIcon from "phosphor-astro/FloppyDisk.astro";
+---
+
+<section>
+  <Card direction="left">
+    <div class="resume-container">
+      <h1>Want to know more about me ?</h1>
+      <LinkButton href="">
+        <FloppyDiskIcon />
+        <p>Download my resume</p>
+      </LinkButton>
+    </div>
+  </Card>
+</section>
+
+<style>
+  .resume-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+</style>

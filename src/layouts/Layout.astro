@@ -1,0 +1,224 @@
+---
+import "../styles/global.css";
+---
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const scrollables = document.getElementsByClassName("smooth-scroll");
+    for (const scroll of scrollables) {
+      const ref = scroll.getAttribute("href");
+      if (ref !== null) {
+        const target =
+          ref.length <= 1
+            ? document.body
+            : document.getElementById(ref.substring(1));
+        scroll.addEventListener("click", (e) => {
+          e.preventDefault();
+          target?.scrollIntoView({ behavior: "smooth" });
+        });
+      }
+    }
+  });
+</script>
+
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Louis Painter</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <a href="#" class="smooth-scroll" target="_self"
+              >🏠 <span>Home</span></a
+            >
+          </li>
+          <li>
+            <a href="#social" class="smooth-scroll" target="_self"
+              >💌 <span>Social</span></a
+            >
+          </li>
+          <li>
+            <a href="#projects" class="smooth-scroll" target="_self"
+              >💾 <span>Projects</span></a
+            >
+          </li>
+          <li>
+            <a href="#skills" class="smooth-scroll" target="_self"
+              >🎯 <span>Skills</span></a
+            >
+          </li>
+          <li>
+            <a href="#resume" class="smooth-scroll" target="_self"
+              >📖 <span>Resume</span></a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="bg"></div>
+      <div class="paper">
+        <slot />
+      </div>
+    </main>
+    <footer>
+      <div class="links">
+        <a href="https://github.com/louipa" target="_self"><p>github</p> </a>
+        <a href="https://www.linkedin.com/in/louis-painter/" target="_self"
+          ><p>linkedin</p></a
+        >
+      </div>
+      <p class="credits">
+        Animations made by <a
+          href="https://lottiefiles.com/free-animation/bee-flying-vJWTooo0vK"
+          target="_self">Madiya</a
+        >, <a
+          href="https://lottiefiles.com/free-animation/plant-recolor-V0vCZKAfmu"
+          target="_self">Brad</a
+        > and <a
+          href="https://lottiefiles.com/free-animation/loader-cat-dWUie0iIVk"
+          target="_self">Diane</a
+        > on <a href="https://lottiefiles.com/" target="_self">LottieFiles</a>
+      </p>
+      <p class="credits">
+        Made with ❤️ using <a href="https://astro.build/" target="_self"
+          >Astro</a
+        >
+      </p>
+      <p>© 2025</p>
+    </footer>
+  </body>
+</html>
+
+<style>
+  html,
+  body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bg {
+    background-color: #fff9f2;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: -2;
+    top: -1vh;
+    left: 0;
+  }
+
+  body::before {
+    --line-color: #bad4b8;
+    --line-size: 80px;
+    content: "";
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    background:
+      linear-gradient(90deg, var(--line-color) 1px, transparent 1px) 0 0 /
+        var(--line-size) var(--line-size),
+      linear-gradient(var(--line-color) 1px, transparent 1px) 0 0 /
+        var(--line-size) var(--line-size);
+    z-index: -1;
+    top: -1vh;
+    mask: linear-gradient(-360deg, transparent 0%, white);
+  }
+
+  .paper {
+    background-color: transparent;
+    max-width: 60rem;
+  }
+
+  header {
+    position: sticky;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    max-width: 100%;
+    width: auto;
+    background-image: url("../assets/topography.svg");
+    backdrop-filter: blur(15px);
+    border: 2px solid #c9c4ad;
+    border-radius: 45px;
+    padding: 0 2rem 0 2rem;
+    z-index: 1000;
+    user-select: none;
+
+    ul {
+      display: flex;
+      flex-direction: row;
+      list-style: none;
+      gap: 2rem;
+      flex-wrap: wrap;
+
+      a {
+        text-decoration: none;
+        cursor: pointer;
+        color: black;
+      }
+
+      span {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem;
+
+    p {
+      color: black;
+    }
+
+    .small {
+      color: black;
+
+      a {
+        color: blue;
+        text-decoration: underline;
+      }
+    }
+
+    .credits {
+      font-size: 0.8rem;
+      a {
+        color: black;
+      }
+      p {
+        color: gray;
+      }
+    }
+  }
+
+  .links {
+    display: flex;
+    gap: 1rem;
+
+    a {
+      text-decoration: none;
+      :hover {
+        text-decoration: underline;
+      }
+    }
+
+    p {
+      text-decoration: underline;
+    }
+  }
+</style>

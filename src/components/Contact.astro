@@ -1,0 +1,39 @@
+---
+import "../styles/global.css";
+import Card from "../layouts/Card.astro";
+import LinkButton from "./LinkButton.astro";
+import LinkedInIcon from "phosphor-astro/LinkedinLogo.astro";
+import GitHubIcon from "phosphor-astro/GithubLogo.astro";
+---
+
+<section>
+  <Card direction="right">
+    <div class="contact">
+      <h1>Care to join me for a cup of tea ? ☕</h1>
+      <div class="links">
+        <LinkButton href="https://github.com/louipa">
+          <GitHubIcon />
+          <p>Github</p>
+        </LinkButton>
+        <LinkButton href="https://www.linkedin.com/in/louis-painter/">
+          <LinkedInIcon />
+          <p>LinkedIn</p>
+        </LinkButton>
+      </div>
+    </div>
+  </Card>
+
+  <style>
+    .links {
+      display: flex;
+      justify-content: space-evenly;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .contact {
+      margin: 1rem;
+      text-align: center;
+    }
+  </style>
+</section>

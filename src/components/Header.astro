@@ -1,0 +1,52 @@
+---
+import "../styles/global.css";
+---
+
+<header>
+  <nav>
+    <ul>
+      <li><a href="#">🏠 <span>Home</span></a></li>
+      <li><a href="#social">💌 <span>Social</span></a></li>
+      <li><a href="#projects">💾 <span>Projects</span></a></li>
+      <li><a href="#skills">🎯 <span>Skills</span></a></li>
+    </ul>
+  </nav>
+</header>
+
+<style>
+  header {
+    position: sticky;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    max-width: 100%;
+    width: auto;
+    background-color: transparent;
+    backdrop-filter: blur(15px);
+    border: 2px solid #c9c4ad;
+    border-radius: 45px;
+    padding: 0 2rem 0 2rem;
+    z-index: 1000;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 2rem;
+    flex-wrap: wrap;
+
+    a {
+      text-decoration: none;
+      cursor: pointer;
+      color: black;
+    }
+
+    span {
+      text-decoration: underline;
+    }
+  }
+</style>

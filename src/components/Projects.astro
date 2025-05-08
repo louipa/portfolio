@@ -1,0 +1,118 @@
+---
+import "../styles/global.css";
+import Card from "../layouts/Card.astro";
+import "@splidejs/splide/css/sea-green";
+---
+
+<script>
+  import Splide from "@splidejs/splide";
+  Splide.defaults = {
+    width: "90%",
+    keyboard: true,
+    wheel: true,
+    releaseWheel: true,
+    waitForTransition: true,
+    wheelSleep: 0.5,
+    wheelMinThreshold: 10,
+  };
+  document.addEventListener("DOMContentLoaded", function () {
+    var splide = new Splide(".splide");
+    splide.mount();
+  });
+</script>
+
+<section>
+  <Card>
+    <h1>Projects</h1>
+    <p>Here are some of my projects.</p>
+    <div class="splide" aria-label="Project Carousel">
+      <div class="splide__track">
+        <ul class="splide__list">
+          <li class="splide__slide">
+            <a href="https://github.com/louipa/Tango">
+              <img
+                src="tango.webp"
+                alt="Main page of the Tango web application"
+              />
+              <p class="title">Tango</p>
+            </a>
+            <p class="description">
+              A clone of the board game Tango on Linkedin.
+            </p>
+          </li>
+          <li class="splide__slide">
+            <a
+              href="https://l23paint.gitlab-pages.imt-atlantique.fr/snoezelen/"
+            >
+              <img
+                src="snoezelen.webp"
+                alt="Main page of the Snoezelen web application"
+              />
+              <p class="title">Snoezelen</p>
+            </a>
+            <p class="description">
+              A web application mimicking a sensory room, developed with React
+              ThreeJS.
+            </p>
+          </li>
+          <!-- <li class="splide__slide">
+            <a href="https://github.com/tfreret/Airport-MQTT-Sensors">
+              <p>Airport Sensors</p>
+            </a>
+            <p class="description">
+              A project using MQTT to monitor the temperature and humidity of an
+              airport through a web and an android client.
+            </p>
+          </li> -->
+        </ul>
+      </div>
+    </div>
+  </Card>
+</section>
+
+<style>
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+    margin: 2rem;
+  }
+
+  ul li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-wrap: wrap;
+    gap: 1rem;
+
+    .description {
+      max-width: 15rem;
+    }
+
+    img {
+      border-radius: 5px;
+      width: 30rem;
+      margin-bottom: 1rem;
+    }
+
+    .title {
+      color: black;
+      text-decoration: underline;
+      text-decoration-color: black;
+      font-size: 1.2rem;
+      font-family: "Merriweather", sans-serif;
+    }
+  }
+</style>
+
+<style is:global>
+  .splide__arrow svg {
+    fill: #009179 !important;
+  }
+
+  .splide__pagination__page.is-active {
+    background: #009179 !important;
+  }
+</style>
