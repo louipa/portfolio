@@ -93,7 +93,9 @@ import "@splidejs/splide/css/sea-green";
 
     img {
       border-radius: 5px;
-      width: 30rem;
+      width: 100%;
+      max-width: 30rem;
+      height: auto;
       margin-bottom: 1rem;
     }
 
@@ -103,6 +105,19 @@ import "@splidejs/splide/css/sea-green";
       text-decoration-color: black;
       font-size: 1.2rem;
       font-family: "Merriweather", sans-serif;
+    }
+  }
+
+  @media (max-width: 768px) {
+    ul li {
+      .description {
+        max-width: 100%;
+        padding: 0 1rem;
+      }
+
+      img {
+        max-width: 100%;
+      }
     }
   }
 </style>

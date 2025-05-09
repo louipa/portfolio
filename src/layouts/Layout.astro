@@ -139,9 +139,6 @@ import "../styles/global.css";
 
   header {
     position: sticky;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     top: 1rem;
     margin-top: 1rem;
     margin-bottom: 2rem;
@@ -157,6 +154,7 @@ import "../styles/global.css";
 
     ul {
       display: flex;
+      justify-content: center;
       flex-direction: row;
       list-style: none;
       gap: 2rem;
@@ -166,6 +164,10 @@ import "../styles/global.css";
         text-decoration: none;
         cursor: pointer;
         color: black;
+      }
+
+      a:hover {
+        color: blue;
       }
 
       span {
@@ -186,39 +188,30 @@ import "../styles/global.css";
       color: black;
     }
 
-    .small {
+    .links {
+      display: flex;
+      gap: 1rem;
       color: black;
-
-      a {
+      :hover {
         color: blue;
-        text-decoration: underline;
+      }
+      a {
+        text-decoration-color: black;
+      }
+      a:hover {
+        text-decoration-color: blue;
       }
     }
 
     .credits {
       font-size: 0.8rem;
+      text-align: center;
       a {
         color: black;
       }
-      p {
-        color: gray;
+      a:hover {
+        color: blue;
       }
-    }
-  }
-
-  .links {
-    display: flex;
-    gap: 1rem;
-
-    a {
-      text-decoration: none;
-      :hover {
-        text-decoration: underline;
-      }
-    }
-
-    p {
-      text-decoration: underline;
     }
   }
 </style>

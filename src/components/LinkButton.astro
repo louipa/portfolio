@@ -1,11 +1,18 @@
 ---
 interface Props {
   href: string;
+  target?: string;
+  type?: string;
 }
 const props = Astro.props as Props;
 ---
 
-<a class="link-button" href={props.href} target="_self">
+<a
+  class="link-button"
+  href={props.href}
+  target={props.target}
+  type={props.type}
+>
   <slot />
 </a>
 

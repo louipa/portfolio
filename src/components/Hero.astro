@@ -28,7 +28,15 @@ import Card from "../layouts/Card.astro";
   }
 
   img {
-    width: 15rem;
+    width: 12rem;
     border-radius: 10px;
+  }
+
+  @media (max-width: 800px) {
+    .hero {
+      flex-direction: column;
+      gap: 2rem;
+      padding: 1rem;
+    }
   }
 </style>
