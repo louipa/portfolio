@@ -14,7 +14,8 @@ Welcome to my portfolio! This repository showcases my work, skills, and experien
 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/portfolio.git
+git clone https://github.com/louipa/portfolio
+cd portfolio
 ```
 
 2. Install dependencies
@@ -29,7 +30,7 @@ npm install
 npm run dev
 ```
 
-4. Open [http://localhost:4321/](http://localhost:4321/) in your browser
+4. Open [http://localhost:4321/portfolio](http://localhost:4321/portfolio) in your browser
 
 ## Project Structure
 
