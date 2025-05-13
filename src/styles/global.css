@@ -2,7 +2,7 @@
 @import url("../fonts/drafting-mono/style.css");
 
 :root {
-  /* Couleurs */
+  /* Colors */
   --color-primary: #009179;
   --color-secondary: #005b48;
   --color-background: #fff9f2;
@@ -13,18 +13,18 @@
   --color-button: #f3bd20;
   --color-button-hover: #5b5b57;
 
-  /* Typographie */
+  /* Typography */
   --font-primary: "Merriweather", serif;
   --font-secondary: "Drafting* Mono";
   --font-display: "Bebas Neue", cursive;
 
-  /* Espacement */
+  /* Spacing */
   --spacing-xs: 0.5rem;
   --spacing-sm: 1rem;
   --spacing-md: 2rem;
   --spacing-lg: 4rem;
 
-  /* Bordures */
+  /* Borders */
   --border-radius-sm: 0.5rem;
   --border-radius-md: 10px;
   --border-radius-lg: 45px;
@@ -61,7 +61,6 @@ p {
   text-align: center;
 }
 
-/* Media queries */
 @media (max-width: 768px) {
   :root {
     --spacing-lg: 2rem;
