@@ -5,32 +5,73 @@
 @import url("../fonts/drafting-mono/style.css");
 
 :root {
+  /* Couleurs */
+  --color-primary: #009179;
+  --color-secondary: #005b48;
+  --color-background: #fff9f2;
+  --color-background-rgb: 255, 249, 242;
+  --color-border: #c9c4ad;
+  --color-text: #000000;
+  --color-accent: #59808a;
+  --color-button: #f3bd20;
+  --color-button-hover: #5b5b57;
+
+  /* Typographie */
+  --font-primary: "Merriweather", serif;
+  --font-secondary: "Drafting* Mono";
+  --font-display: "Bebas Neue", cursive;
+
+  /* Espacement */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 4rem;
+
+  /* Bordures */
+  --border-radius-sm: 0.5rem;
+  --border-radius-md: 10px;
+  --border-radius-lg: 45px;
 }
 
 h1 {
-  font-family: "Merriweather", serif;
+  font-family: var(--font-primary);
   font-weight: bold;
   font-size: 2rem;
-  color: #009179;
-  margin: 1rem;
+  color: var(--color-primary);
+  margin: var(--spacing-sm);
 }
 
 p {
-  font-family: "Drafting* Mono";
+  font-family: var(--font-secondary);
   font-weight: normal;
   font-style: normal;
   font-size: 1rem;
-  color: #005b48;
+  color: var(--color-secondary);
 }
 
-.button {
-  font-family: "Bebas Neue", cursive;
-  font-weight: normal;
-  font-style: normal;
-  font-size: 2.5rem;
-  color: var(--chalet-green-500);
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+  :root {
+    --spacing-lg: 2rem;
+  }
+}
+
+/* Reset */
 menu,
 ol,
 ul {
@@ -43,7 +84,3 @@ dd {
 p {
   margin: 0;
 }
-
-/* 
-j'aime bien
-#59808a */

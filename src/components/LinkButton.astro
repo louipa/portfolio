@@ -8,7 +8,7 @@ const props = Astro.props as Props;
 ---
 
 <a
-  class="link-button"
+  class="link-button flex-center"
   href={props.href}
   target={props.target}
   type={props.type}
@@ -29,10 +29,6 @@ const props = Astro.props as Props;
       background-color 0.1s linear;
     cursor: pointer;
     text-decoration: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
     padding: 0.5rem 1rem;
 
     p {

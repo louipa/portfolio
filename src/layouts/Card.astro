@@ -1,35 +1,27 @@
 ---
 import "../styles/global.css";
 interface Props {
-  backgroundColor?: string;
-  boxShadowColor?: string;
   direction?: "left" | "right";
 }
 
-const { backgroundColor, boxShadowColor, direction } = Astro.props;
-const boxShadowTranslate = direction === "right" ? "3px 5px" : "-3px 5px";
+const { direction } = Astro.props;
+const shadowDirection = direction === "right" ? "3px 5px" : "-3px 5px";
 ---
 
-<div class="card">
+<div class="card flex-center flex-column">
   <slot />
 </div>
 
 <style
   define:vars={{
-    backgroundColor: backgroundColor ?? "#f5f4f0",
-    boxShadowColor: boxShadowColor ?? "#c9c4ad",
-    boxShadowTranslate,
+    shadowDirection,
   }}
 >
   .card {
-    background-color: var(--backgroundColor);
-    border-radius: 0.5rem;
-    border: 2px solid var(--boxShadowColor);
-    box-shadow: var(--boxShadowTranslate) var(--boxShadowColor);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0.5rem;
+    background-color: var(--color-background);
+    border-radius: var(--border-radius-sm);
+    border: 2px solid var(--color-border);
+    box-shadow: var(--shadowDirection) var(--color-border);
+    padding: var(--spacing-xs);
   }
 </style>

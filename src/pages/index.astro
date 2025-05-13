@@ -12,10 +12,10 @@ import CV from "../components/CV.astro";
     <div id="hero">
       <Hero />
     </div>
-    <div id="plant">
+    <div id="plant" class="flex-center">
       <img src="plant.webp" alt="" />
     </div>
-    <div id="bee">
+    <div id="bee" class="flex-center">
       <img src="bee.webp" alt="" />
     </div>
     <div id="social">
@@ -24,7 +24,7 @@ import CV from "../components/CV.astro";
     <div id="projects">
       <Projects />
     </div>
-    <div id="cat">
+    <div id="cat" class="flex-center">
       <img src="cat.webp" alt="" />
     </div>
     <div id="skills">
@@ -37,6 +37,14 @@ import CV from "../components/CV.astro";
 </Layout>
 
 <style>
+  #hero,
+  #social,
+  #projects,
+  #skills,
+  #resume {
+    scroll-margin-top: 100px;
+  }
+
   .content {
     display: grid;
     gap: 2rem;
@@ -67,9 +75,6 @@ import CV from "../components/CV.astro";
 
   #plant {
     grid-column: 4 / span 6;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100%;
     img {
       width: 16rem;
@@ -78,9 +83,6 @@ import CV from "../components/CV.astro";
 
   #bee {
     grid-column: span 2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     img {
       width: 8rem;
     }
@@ -88,9 +90,6 @@ import CV from "../components/CV.astro";
 
   #cat {
     grid-column: 1 / span 2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     img {
       width: 20rem;
     }

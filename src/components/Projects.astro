@@ -10,7 +10,6 @@ import "@splidejs/splide/css/sea-green";
     width: "90%",
     keyboard: true,
     wheel: true,
-    releaseWheel: true,
     waitForTransition: true,
     wheelSleep: 0.5,
     wheelMinThreshold: 10,
@@ -124,10 +123,35 @@ import "@splidejs/splide/css/sea-green";
 
 <style is:global>
   .splide__arrow svg {
-    fill: #009179 !important;
+    fill: var(--color-primary) !important;
+  }
+
+  .splide__pagination {
+    gap: 1rem;
+  }
+
+  .splide__pagination__page {
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+
+  .splide__pagination__page::before {
+    --hitbox: 0.5rem;
+    content: "";
+    position: absolute;
+    top: calc(-1 * var(--hitbox));
+    left: calc(-1 * var(--hitbox));
+    right: calc(-1 * var(--hitbox));
+    bottom: calc(-1 * var(--hitbox));
+    z-index: -1;
   }
 
   .splide__pagination__page.is-active {
-    background: #009179 !important;
+    background: var(--color-primary) !important;
+  }
+
+  .splide__pagination__page:hover {
+    background: var(--color-accent) !important;
   }
 </style>

@@ -5,40 +5,25 @@ import Card from "../layouts/Card.astro";
 
 <section>
   <Card direction="right">
-    <div class="skills">
+    <div class="skills flex-center flex-column">
       <h1>Just a glimpse into my toolbox.</h1>
       <p>How many can you recognize ?</p>
 
-      <div class="skills-items">
+      <div class="skills-items flex-center">
         <div>
-          <img
-            src="git-original.svg"
-            alt="git"
-          />
+          <img src="git-original.svg" alt="git" />
         </div>
         <div>
-          <img
-            src="unity-plain.svg"|
-            alt="unity"
-          />
+          <img src="unity-plain.svg" | alt="unity" />
         </div>
         <div>
-          <img
-            src="typescript-original.svg"
-            alt="typescript"
-          />
+          <img src="typescript-original.svg" alt="typescript" />
         </div>
         <div>
-          <img
-            src="go-original.svg"
-            alt="go"
-          />
+          <img src="go-original.svg" alt="go" />
         </div>
         <div>
-          <img
-            src="kotlin-original.svg"
-            alt="kotlin"
-          />
+          <img src="kotlin-original.svg" alt="kotlin" />
         </div>
         <div>
           <img src="linux-original.svg" alt="linux" />
@@ -47,22 +32,13 @@ import Card from "../layouts/Card.astro";
           <img src="react-original.svg" alt="react" />
         </div>
         <div>
-          <img
-            src="blender-original.svg"
-            alt="blender"
-          />
+          <img src="blender-original.svg" alt="blender" />
         </div>
         <div>
-          <img
-            src="docker-original.svg"
-            alt="docker"
-          />
+          <img src="docker-original.svg" alt="docker" />
         </div>
         <div>
-          <img
-            src="jira-original.svg"
-            alt="jira"
-          />
+          <img src="jira-original.svg" alt="jira" />
         </div>
       </div>
     </div>
@@ -71,16 +47,10 @@ import Card from "../layouts/Card.astro";
   <style>
     .skills {
       text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
     }
 
     .skills-items {
-      display: flex;
       flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
       gap: 20px;
       margin-top: 1rem;
       text-align: left;

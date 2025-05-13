@@ -7,9 +7,13 @@ import FloppyDiskIcon from "phosphor-astro/FloppyDisk.astro";
 
 <section>
   <Card direction="left">
-    <div class="resume-container">
+    <div class="resume-container flex-center flex-column">
       <h1>Want to know more about me ?</h1>
-      <LinkButton href="Resume_Louis_PAINTER.pdf" target="_blank" type="application/pdf">
+      <LinkButton
+        href="Resume_Louis_PAINTER.pdf"
+        target="_blank"
+        type="application/pdf"
+      >
         <FloppyDiskIcon />
         <p>Download my resume</p>
       </LinkButton>
@@ -19,10 +23,6 @@ import FloppyDiskIcon from "phosphor-astro/FloppyDisk.astro";
 
 <style>
   .resume-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     text-align: center;
     padding-bottom: 1rem;
   }
