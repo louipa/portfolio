@@ -1,0 +1,63 @@
+<footer class="flex-center flex-column">
+  <div class="links">
+    <a href="https://github.com/louipa" target="_self"><p>github</p> </a>
+    <a href="https://www.linkedin.com/in/louis-painter/" target="_self"
+      ><p>linkedin</p></a
+    >
+  </div>
+  <p class="credits">
+    Animations made by <a
+      href="https://lottiefiles.com/free-animation/bee-flying-vJWTooo0vK"
+      target="_self">Madiya</a
+    >, <a
+      href="https://lottiefiles.com/free-animation/plant-recolor-V0vCZKAfmu"
+      target="_self">Brad</a
+    > and <a
+      href="https://lottiefiles.com/free-animation/loader-cat-dWUie0iIVk"
+      target="_self">Diane</a
+    > on <a href="https://lottiefiles.com/" target="_self">LottieFiles</a>
+  </p>
+  <p class="credits">
+    Made with ❤️ using <a href="https://astro.build/" target="_self">Astro</a>
+  </p>
+  <p>© 2025</p>
+</footer>
+
+<style>
+  footer {
+    gap: var(--spacing-sm);
+    padding: var(--spacing-lg);
+
+    p {
+      color: var(--color-text);
+    }
+
+    .links {
+      display: flex;
+      gap: var(--spacing-sm);
+
+      a {
+        text-decoration-color: var(--color-text);
+        &:hover {
+          text-decoration-color: blue;
+
+          p {
+            color: blue;
+          }
+        }
+      }
+    }
+
+    .credits {
+      font-size: 0.8rem;
+      text-align: center;
+
+      a {
+        color: var(--color-text);
+        &:hover {
+          color: blue;
+        }
+      }
+    }
+  }
+</style>

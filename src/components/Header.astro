@@ -1,14 +1,49 @@
----
-import "../styles/global.css";
----
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const scrollables = document.getElementsByClassName("smooth-scroll");
+    for (const scroll of scrollables) {
+      const ref = scroll.getAttribute("href");
+      if (ref !== null) {
+        const target =
+          ref.length <= 1
+            ? document.body
+            : document.getElementById(ref.substring(1));
+        scroll.addEventListener("click", (e) => {
+          e.preventDefault();
+          target?.scrollIntoView({ behavior: "smooth" });
+        });
+      }
+    }
+  });
+</script>
 
-<header class="flex-center">
+<header>
   <nav>
     <ul class="flex-center">
-      <li><a href="#">🏠 <span>Home</span></a></li>
-      <li><a href="#social">💌 <span>Social</span></a></li>
-      <li><a href="#projects">💾 <span>Projects</span></a></li>
-      <li><a href="#skills">🎯 <span>Skills</span></a></li>
+      <li>
+        <a href="#" class="smooth-scroll" target="_self">🏠 <span>Home</span></a
+        >
+      </li>
+      <li>
+        <a href="#social" class="smooth-scroll" target="_self"
+          >💌 <span>Social</span></a
+        >
+      </li>
+      <li>
+        <a href="#projects" class="smooth-scroll" target="_self"
+          >💾 <span>Projects</span></a
+        >
+      </li>
+      <li>
+        <a href="#skills" class="smooth-scroll" target="_self"
+          >🎯 <span>Skills</span></a
+        >
+      </li>
+      <li>
+        <a href="#resume" class="smooth-scroll" target="_self"
+          >📖 <span>Resume</span></a
+        >
+      </li>
     </ul>
   </nav>
 </header>
@@ -16,33 +51,45 @@ import "../styles/global.css";
 <style>
   header {
     position: sticky;
-    top: 1rem;
-    margin-top: 1rem;
-    margin-bottom: 2rem;
+    top: var(--spacing-sm);
+    margin: var(--spacing-sm) 0 var(--spacing-md);
     max-width: 100%;
-    max-height: 100px;
     width: auto;
-    background-color: transparent;
+    background: rgba(var(--color-background-rgb), 0.5);
+    background-image: url("/portfolio/topography.svg");
     backdrop-filter: blur(15px);
-    border: 2px solid #c9c4ad;
-    border-radius: 45px;
-    padding: 0 2rem 0 2rem;
+    border: 2px solid var(--color-border);
+    border-radius: var(--border-radius-lg);
+    padding: 0 var(--spacing-md);
     z-index: 1000;
-  }
+    user-select: none;
 
-  ul {
-    list-style: none;
-    gap: 2rem;
-    flex-wrap: wrap;
+    ul {
+      list-style: none;
+      gap: var(--spacing-md);
+      flex-wrap: wrap;
+    }
 
     a {
       text-decoration: none;
       cursor: pointer;
-      color: black;
+      color: var(--color-text);
+      transition: color 0.2s ease;
+    }
+
+    a:hover {
+      color: blue;
     }
 
     span {
       text-decoration: underline;
+      font-family: var(--font-primary);
+    }
+  }
+
+  @media (max-width: 768px) {
+    header ul {
+      gap: var(--spacing-sm);
     }
   }
 </style>
