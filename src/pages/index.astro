@@ -99,15 +99,22 @@ import Footer from "../components/Footer.astro";
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 700px) {
     #cat,
     #plant,
     #bee {
-      display: none;
+      grid-column: span 4;
+    }
+
+    #cat {
+      margin: -1rem;
+    }
+
+    #bee {
+      grid-row: 4;
     }
 
     #hero,
-    #social,
     #social,
     #projects,
     #skills,
