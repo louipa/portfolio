@@ -10,6 +10,7 @@
     "deploy": "npm run build && gh-pages -d dist"
   },
   "dependencies": {
+    "@astrojs/mdx": "^4.2.6",
     "@splidejs/splide": "^4.1.4",
     "astro": "^5.7.5",
     "phosphor-astro": "^2.1.0"
